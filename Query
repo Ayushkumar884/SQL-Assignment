@@ -1,0 +1,9 @@
+1. select count(Sname),Sname from salespeople where Sname like"a%" or Sname like"A%";
+2. select s.Sname ,sum(o.amt) from salespeople s
+   inner join orders o
+   on s.Snum=o.Snum where o.amt>2000 group by(o.Snum);
+3. select count(Sname),Sname,city from salespeople where City ="Newyork";
+4. select Sname,city from salespeople where City ="London" or City="Paris";
+5. select s.Sname,o.Odate from  orders o
+   inner join salespeople s
+   on s.Snum=o.Snum ;
